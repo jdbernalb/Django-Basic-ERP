@@ -1,0 +1,8 @@
+ {% extends 'base.html' %} {% block title %}
+<h1>Gastos Varios</h1>
+{% endblock title %} {% block content %}
+<form class="page-form form-horizontal text-justify" action="{% url 'polls:Gastos_Varios' %}" method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Registrar" />
+</form>
+{% endblock content %}

@@ -1,0 +1,6 @@
+<h1>{{ eq.nombre_equipo }}</h1>
+<ul>
+{% for consumo in eq.consumo_set.all %}
+    <li>{{ consumo.consumo_id }}</li>
+{% endfor %}
+</ul>

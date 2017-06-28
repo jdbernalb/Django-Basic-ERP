@@ -1,0 +1,29 @@
+ {% load staticfiles %}
+<html>
+
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{% static '/css/login_rhema.css' %}">
+    <link rel="stylesheet" type="text/css" href="/polls/static/admin/css/login_rhema.css">
+</head>
+{% block content %}
+<div id="container">
+  <div id="header">
+    <div id="branding">
+      <h1 id="site-name"> Rhema </h1>
+    </div>
+  </div>
+  <div id="content" class="colM">
+    <div id="content-main">
+      <form method="post" class="login" action="{% url 'login' %}">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <br class="clear">
+  </div>
+  <div id="footer"></div>
+</div>
+{% endblock %}
+</html>
